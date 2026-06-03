@@ -1,0 +1,15 @@
+{
+  "common": {
+    "appName": "Coop Use"
+  },
+  "meta": {
+    "title": "Coop use"
+  },
+  "enums": {
+    "mode": {
+      "view": "View",
+      "add": "Add",
+      "edit": "Edit"
+    }
+  }
+}
