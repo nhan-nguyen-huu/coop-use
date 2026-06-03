@@ -5,6 +5,9 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   resolve: { tsconfigPaths: true },
+  build: {
+    sourcemap: false
+  },
   plugins: [
     tailwindcss(),
     reactRouter(),
