@@ -1,5 +1,4 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useTranslation } from 'react-i18next'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse } from 'react-router'
 
 import type { Route } from './+types/root'
@@ -9,9 +8,9 @@ import { Toaster } from './components/ui/sonner'
 import { Provider } from './providers'
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { i18n } = useTranslation()
+  // const { i18n } = useTranslation()
   return (
-    <html lang={i18n.language} suppressHydrationWarning>
+    <html lang={'en'} suppressHydrationWarning>
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />

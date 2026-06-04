@@ -5,6 +5,9 @@
   "meta": {
     "title": "Coop use"
   },
+  "inputValidate": {
+    "informationisRequired": "이 정보는 필수입니다."
+  },
   "enums": {
     "mode": {
       "view": "View",
