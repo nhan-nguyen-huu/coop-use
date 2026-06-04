@@ -1,5 +1,6 @@
 export const API_AUTH = {
-  LOGIN_URL: 'auth/login'
+  LOGIN_URL: 'auth/login',
+  LOGOUT_URL: 'auth/logout'
 }
 
 export const API_USER = {

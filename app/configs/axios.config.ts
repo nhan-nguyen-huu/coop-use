@@ -34,13 +34,13 @@ axiosClient.interceptors.response.use(
   (response: AxiosResponse) => response.data,
   async (error) => {
     // Error code
-    const errorCode = error?.response?.data?.errorCode || error?.response?.data?.statusCode
+    const errorCode = error?.response?.data?.code
 
     // Message
-    const errorMessage = error?.response?.data?.message
+    const errorMessage = error?.response?.data?.message || errorHelper.getDefaultErrorMessage(errorCode)
 
     // Errorcode - Unauthorized
-    if (error?.status === 401) {
+    if (error?.status === 401 && !error?.config?.url?.includes('auth/login')) {
       cookieHelper.removeAccessToken()
       if (!hasShow401Toast) {
         hasShow401Toast = true
@@ -58,7 +58,7 @@ axiosClient.interceptors.response.use(
     }
 
     // Last case
-    toast.error(errorMessage || errorHelper.getDefaultErrorMessage(errorCode))
+    toast.error(errorMessage)
     return Promise.reject(error?.response?.data)
   }
 )

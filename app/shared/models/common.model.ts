@@ -1,14 +1,15 @@
+export interface IApiPagination {
+  content?: []
+  page?: number
+  size?: number
+  totalElements?: number
+  totalPages?: number
+  last?: boolean
+}
+
 export interface IApiResponse<T> {
-  result: {
-    data?: T
-    total?: number
-    status?: boolean
-    totalPage?: number
-    totalItem?: number
-    last?: boolean
-  }
-  message: string
-  statusCode: number
-  status?: string | number
-  errorCode?: string
+  result?: boolean
+  data?: T
+  message?: string
+  code?: number | string
 }

@@ -8,14 +8,12 @@ export const EMAIL_REGEX = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
 
 export const getLoginSchema = (t: TFunction) =>
   z.object({
-    [eLoginFormKey.Username]: z
+    [eLoginFormKey.Email]: z
       .string()
       .nonempty({ message: t('inputValidate.informationisRequired') })
       .regex(EMAIL_REGEX, t('inputValidate.informationisRequired')),
-    [eLoginFormKey.Password]: z
-      .string()
-      .nonempty({ message: t('inputValidate.informationisRequired') })
-      .regex(PASSWORD_REGEX, t('inputValidate.informationisRequired'))
+    [eLoginFormKey.Password]: z.string().nonempty({ message: t('inputValidate.informationisRequired') })
+    // .regex(PASSWORD_REGEX, t('inputValidate.informationisRequired'))
   })
 
 export type LoginFormSchema = z.infer<ReturnType<typeof getLoginSchema>>

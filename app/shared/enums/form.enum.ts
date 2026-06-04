@@ -1,4 +1,4 @@
 export enum eLoginFormKey {
-  Username = 'username',
+  Email = 'email',
   Password = 'password'
 }
