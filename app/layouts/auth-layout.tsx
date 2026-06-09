@@ -8,9 +8,9 @@ export function meta() {
   return [{ title: t('meta.title') }, { name: 'Welcome', content: 'Welcome' }]
 }
 
-export function HydrateFallback() {
-  return <></>
-}
+// export function HydrateFallback() {
+//   return <></>
+// }
 
 const AuthLayout = () => {
   return <Outlet />

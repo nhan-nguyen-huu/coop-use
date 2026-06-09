@@ -4,9 +4,9 @@ import { authHelper } from '~/helpers'
 
 export const clientLoader = () => authHelper.handleProtectedRoute('ROOT')
 
-export function HydrateFallback() {
-  return <p></p>
-}
+// export function HydrateFallback() {
+//   return <p></p>
+// }
 
 const MainLayout = () => {
   return (
