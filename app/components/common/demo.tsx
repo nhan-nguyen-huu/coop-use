@@ -21,7 +21,7 @@ import type { ILoginPayload } from '~/shared/models'
 import useGlobalLoaderStore from '~/stores/global-loader'
 
 export default function DemoPage() {
-  // Test 01
+  // Test 02
   // Translate
   const { t } = useTranslation()
   const [showPassword, setShowPassword] = useState(false)
